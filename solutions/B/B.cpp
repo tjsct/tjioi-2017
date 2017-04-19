@@ -1,14 +1,11 @@
-#include <fstream>
+#include <iostream>
 
 using namespace std;
 
-int main() {
-  ifstrema fin ("B.in");
-  ofstream fout ("B.out");
-  
+int main() { 
   int n, x, y;
   char ch, temp;
-  fin >> n >> x >> y;
+  cin >> n >> x >> y;
   for (int i = 0; i < n; i++) {
     cin >> ch >> temp;
     if (ch == 'N')
@@ -19,10 +16,8 @@ int main() {
       y -= temp;
     else
       x -= temp;
-  }
-  
-  fout << x << y << endl;
-  fout.close();
+  }  
+  cout << x << y << endl;
   
   return 0;
 }
