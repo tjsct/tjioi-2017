@@ -6,7 +6,7 @@ int main() {
   cin >> N;
   for(int x=0; x<N; x++) {
     if(x*(x+1)/2 >= N) {
-      cout << i;
+      cout << x;
       break;
     }
   }
