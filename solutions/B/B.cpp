@@ -13,7 +13,7 @@ int main() {
     cin >> ch >> temp;
     if (ch == 'N')
       y += temp;
-    else if (ch == 'W')
+    else if (ch == 'E')
       x += temp;
     else if (ch == 'S')
       y -= temp;
