@@ -4,7 +4,8 @@ using namespace std;
 
 int main() { 
   int n, x, y;
-  char ch, temp;
+  char ch;
+  int temp;
   cin >> n >> x >> y;
   for (int i = 0; i < n; i++) {
     cin >> ch >> temp;
@@ -17,7 +18,7 @@ int main() {
     else
       x -= temp;
   }  
-  cout << x << y << endl;
+  cout << x << ' ' << y << endl;
   
   return 0;
 }
