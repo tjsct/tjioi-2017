@@ -9,9 +9,9 @@ int main() {
     int a, b;
     cin >> a >> b;
     if (a / 100 * t <= b)
-      cout << "Once you quit track you can never come back" << endl;
+      cout << "POTATO" << endl;
     else
-      cout << "What do you mean I'm slow" << endl;
+      cout << "SPEEDRACER" << endl;
   }
   
   return 0;
