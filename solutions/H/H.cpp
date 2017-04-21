@@ -1,26 +1,14 @@
-#include <algorithm>
 #include <iostream>
-#include <cstdio>
-#include <cstdlib>
-#include <string>
-#include <fstream>
-#include <bitset>
-#include <utility>
-#include <stack>
-#include <map>
+#include <algorithm>
 #include <set>
-#include <vector>
-#include <assert.h>
-#include <cmath>
-#include <iomanip>
-
 using namespace std;
+
+set<int> st[100005];
+int a[100005];
 
 int main(){
     int N; cin >> N;
     int Q; cin >> Q;
-    set<int> st[100005];
-    int a[100005];
     for (int i = 0; i < N; i++){
         int num; cin >> num;
         a[i] = num;
