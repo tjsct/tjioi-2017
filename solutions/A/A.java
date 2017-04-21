@@ -11,9 +11,9 @@ public class A{
             int B = sc.nextInt();
             int robot_time = (A/100) * T;
             if(robot_time > B){
-                System.out.println("What do you mean I'm slow?");
+                System.out.println("SPEEDRACER");
             } else{
-                System.out.println("Once you quit track you can never come back");
+                System.out.println("POTATO");
             }
         }
     }
