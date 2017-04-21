@@ -3,6 +3,6 @@ for _ in range(n):
   a, b = map(int, input().split())
   d = a//100 * T
   if d <= b:
-    print("Once you quit track you can never come back")
+    print("POTATO")
   else:
-    print("What do you mean I'm slow?")
+    print("SPEEDRACER")
