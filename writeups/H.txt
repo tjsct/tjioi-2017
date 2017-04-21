@@ -1,0 +1,7 @@
+for each a_i, factor
+create sets for each prime
+add a_i to each set that it contains a factor of
+e.g. 15 would go in set 3 and 5
+these are treesets, so each entry is (index, actual number)
+then query is just finding minimum index in the corresponding set
+for swapping, factor both numbers and update the sets accordingly

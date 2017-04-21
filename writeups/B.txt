@@ -1,0 +1,1 @@
+Here we read in the inital coordinate and for each "query" we make updates to these coordinates. In the query, if we see an N we add to the y coordinate, if we see a S we subtract from the y coordinate, if we see an E we add to the x coordinate, and if we see a W we subtract from the x coordinate. At the end, we output the result of all the "queries".
