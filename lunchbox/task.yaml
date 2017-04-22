@@ -1,5 +1,5 @@
-name: "A"
-title: ""
+name: lunchbox
+title: Lunchbox Hunt
 time_limit: 2
 memory_limit: 256
 n_input: 10
@@ -7,4 +7,3 @@ infile: ""
 outfile: ""
 score_mode: max
 token_mode: disabled
-public_testcases: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
