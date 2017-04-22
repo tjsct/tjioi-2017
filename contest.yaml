@@ -1,0 +1,31 @@
+name: test_run
+description: TJ IOI 2017 Test Run
+tasks:
+    - race
+    - lunchbox
+    - singing
+    - pencils
+    - puck
+    - candy
+    - larryopoly
+    - cookie
+    - hungry
+    - grocery
+users:
+    - username: team1
+      password: password
+      first_name: Team 1
+      last_name: TJHSST
+    - username: team2
+      password: password
+      first_name: Team 2
+      last_name: TJHSST
+    - username: team3
+      password: password
+      first_name: Team 3
+      last_name: TJHSST
+    - username: team4
+      password: password
+      first_name: Team 4
+      last_name: TJHSST
+
