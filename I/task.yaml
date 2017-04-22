@@ -1,0 +1,9 @@
+name: "I"
+title: ""
+time_limit: 2
+memory_limit: 256
+n_input: 10
+infile: ""
+outfile: ""
+score_mode: max
+token_mode: disabled
