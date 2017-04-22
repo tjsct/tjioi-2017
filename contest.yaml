@@ -28,4 +28,7 @@ users:
       password: password
       first_name: Team 4
       last_name: TJHSST
+    - username: test
+      password: test123
+      hidden: true
 
