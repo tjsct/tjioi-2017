@@ -2,8 +2,7 @@ import heapq
 
 try:
     input = raw_input
-except e:
-    #thank god you're using python 3
+except NameError:
     pass
 
 n = int(input(""))
