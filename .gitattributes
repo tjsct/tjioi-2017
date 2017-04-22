@@ -1,0 +1,12 @@
+* text=auto
+
+*.py text
+*.java text
+*.c text
+
+*.in text
+*.out text
+*.txt text
+
+*.pdf binary
+
