@@ -1,18 +1,15 @@
-#include <fstream>
+#include <iostream>
 #include <vector>
 #include <algorithm>
 
-using mamespace std;
+using namespace std;
 
 int main() {
-  ifstream fin ("D.in");
-  ofstream fout("D.out");
-  
   int n, k, temp;
   vector<int> pencils;
-  fin >> n >> k;
+  cin >> n >> k;
   for (int i = 0; i < n; i++) {
-    fin >> temp;
+    cin >> temp;
     pencils.push_back(temp);
   }
   sort(pencils.begin(), pencils.end());
@@ -21,8 +18,7 @@ int main() {
   for (int i = n-1; i >= n-k; i--)
     sum += pencils[i];
   
-  fout << sum << endl;
-  fout.close()
-  
+  cout << sum << endl;
+ 
   return 0;
 }
