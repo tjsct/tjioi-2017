@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\begin{document}
+
+\newcommand{\blank}{\vskip 3mm}
+\setlength\parindent{0pt}
+\renewcommand\thesection{\Alph{section}}
+
+\setcounter{section}{2}
+\section{Singing Low}
+
+Devon enjoys singing, and wants to see how low he can sing. Devon begins at note $N$ ($1 \leq N \leq 10^6 $), and would like to sing note $0$. In one step, Devon may sing between $1$ and $K$ notes lower than his current note (so if $K$ is $3$ and he is on note $5$, he can sing either $3$, $2$, or $1$ notes lower than his current note, taking him to notes $2$, $3$, or $4$, respectively). However, Devon's note cannot decrease by any given amount more than once (so if he went from note $5$ to note $3$ in the previous example by going down $2$ notes, he would not be able to go to $1$ as this would again decrease by $2$ notes). Please help Devon calculate the smallest value of $K$ that will allow him to get to note $0$.
+
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line will contain the integer $ N $, the note that Devon begins on.
+\blank
+\textbf{OUTPUT FORMAT:}\\
+The output should consist of one integer, $ K $, the lowest value which will allow Devon to reach note $ 0 $.
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+8
+\end{verbatim}
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+4
+\end{verbatim}
+\end{document}

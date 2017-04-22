@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\begin{document}
+
+\newcommand{\blank}{\vskip 3mm}
+\setlength\parindent{0pt}
+\renewcommand\thesection{\Alph{section}}
+
+\setcounter{section}{6}
+\section{Larryopoly}
+
+
+Larry, being rich, decides to invent his own currency. He creates $ N $ ($ 1 \leq N \leq 100 $) different types of bills, each with a unique dollar value $ d_i $ ($ 1 \leq d_i \leq 1,000 $).
+
+Niki decides to use this currency. Niki wants to feel rich, so he wants to maximize the number of bills he can hold. However, Niki refuses to take more than one bill of each kind. Niki will ask $ M $ times ($ 1 \leq M \leq 100,000 $) if he can hold $ X $ ($ 1 \leq X \leq 1,000,000 $) amount of value in Larry’s currency and if so, how many bills that will take.
+
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line of input contains two integers $ N $ and $ M $, where $ N $ is the number of bills and $ M $ is the number of queries.  The next $ N $ lines each contain one integer, denoting the value of that bill, followed by $ M $ lines, each consisting of a query in the form of a value $ X $.
+\blank
+\textbf{OUTPUT FORMAT:}\\
+Output $ M $ lines, where each line contains the maximum number of bills that could make the value in the corresponding query, or $ -1 $ if this is impossible.
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+3 3
+3
+6
+5
+6
+11
+4
+\end{verbatim}
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+1
+2
+-1
+\end{verbatim}
+\end{document}

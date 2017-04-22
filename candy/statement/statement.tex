@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\begin{document}
+
+\newcommand{\blank}{\vskip 3mm}
+\setlength\parindent{0pt}
+\renewcommand\thesection{\Alph{section}}
+
+\setcounter{section}{5}
+\section{Larry's Candy Fest}
+
+It's Larry's lucky day! While shopping at the supermarket, Larry found a massive blowout sale on candy. Unfortunately, after purchasing a large amount of $ N $ different kinds of candy ($ 1 \leq N \leq 10^5 $), he realized that the receipt of length $ M $ ($ 1 \leq M \leq 10^4 $) has no spaces in it! Larry wants to eat healthy, however, so he wants to know how much sugar is in the candy he will eat.  Help Larry figure out how much sugar he will consume after he eats all of the candy.
+\blank
+Note: It is guaranteed that no candy name is a prefix of another candy name and that a solution exists.
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line of input contains the integer $ N $, the number of different kinds of candy.  The next $ N $ lines contain the name of the candy, a string of length $ M $ ($ 1 \leq M \leq 100 $) given in all capital letters, followed by the amount of sugar in that candy, $a_i$ ($1 \leq a_i \leq 10^5$), separated by a space.  The final line will contain the receipt, a string of capital letters.
+\blank
+\textbf{OUTPUT FORMAT:}\\
+Output a single integer, the amount of sugar that Larry will consume.
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+4
+KITKAT 20
+TWIX 28
+REESES 8
+SNICKERS 9
+TWIXTWIXKITKATREESESTWIXSNICKERSTWIX
+\end{verbatim}
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+149
+\end{verbatim}
+\end{document}

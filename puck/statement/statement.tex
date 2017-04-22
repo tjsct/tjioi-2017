@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\begin{document}
+
+\newcommand{\blank}{\vskip 3mm}
+\setlength\parindent{0pt}
+\renewcommand\thesection{\Alph{section}}
+
+\setcounter{section}{4}
+\section{Puck Puck Moose}
+
+Not only does Larry do no work, but he distracts those around him that are trying to be productive! Larry invites Alex and his $ N - 2 $ friends (Unfortunately, Larry has no friends) to form a circle of $ N $ people ($ 1 \leq N \leq 10 $), in order to play Alex's favorite game, Puck Puck Moose.  Some of the people in the circle do not get along, however, and Alex and Larry must accommodate their friends.  Given the pairs of people who do not want to sit next to each other, determine the number of possible ways that the $ N $ people can sit down in the circle.
+\blank
+Note: A circle is rotationally symmetric, so any configuration that can be rotated into another is considered the same configuration.
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line of input contains two integers, $ N $ and $ K $ ($ 1 \leq K \leq {{N}\choose{2}} $), where $ N $ is the number of people in the circle, numbered from $ 0 $ to $ N - 1 $, and $ K $ is the number of pairs to follow. The next $ K $ lines consist of two integers, denoting the indices of the two people that do not want to sit next to each other.  Note that order does not matter (i.e., if $ 0 $ and $ 1 $ are a disallowed pair, $ 0 $ may not be neither to the left nor the right of $ 1 $.
+\blank
+\textbf{OUTPUT FORMAT:}\\
+Output a single integer, the number of ways that the people can sit down in a circle, such that no pair that does not want to sit next to each other is together.  If no configurations are possible, print $ 0 $.
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+4 2
+0 1
+2 3
+\end{verbatim}
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+2
+\end{verbatim}
+\end{document}

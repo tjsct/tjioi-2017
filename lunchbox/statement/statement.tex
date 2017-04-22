@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\begin{document}
+
+\newcommand{\blank}{\vskip 3mm}
+\setlength\parindent{0pt}
+\renewcommand\thesection{\Alph{section}}
+
+\setcounter{section}{1}
+\section{Lunchbox Hunt}
+
+Alex has decided to go on a treasure hunt to find Devon’s hidden lunchbox somewhere inside the school. Fortunately for Alex, Devon left behind a set of instructions specifying the location of his lunchbox. The instructions consist of a starting location $ (x_0, y_0) $ and $ N $ ($ 1 \leq N \leq 1,000,000 $) queries. Each query consists of a direction specified by the characters ‘N’, ‘S’, ‘E’, and ‘W’, and a non-negative distance. Help Alex find the coordinates of the location of Devon’s lunchbox.
+
+Note: Alex's position $ (x, y) $ at any time is guaranteed to remain within $ -1,000,000,000 \leq x, y \leq 1,000,000,000 $.
+
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line will contain three integers $ N $, $ x_0 $, and $ y_0 $. The following $ N $ lines will describe a query consisting of a character (‘N’, ‘S’, ‘E’, ‘W’) and a non-negative integer distance. ‘N’ corresponds to traveling in the positive $ y $ direction, etc. 
+\blank
+\textbf{OUTPUT FORMAT:}\\
+The output should consist of two integers separated by a space. The first integer is the final $ x $ coordinate and the second integer is the final $ y $ coordinate. 
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+4 6 -2
+N 3
+S 5
+W 2
+W 1
+\end{verbatim}
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+3 -4
+\end{verbatim}\end{document}
