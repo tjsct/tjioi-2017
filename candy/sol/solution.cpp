@@ -1,24 +1,21 @@
 #include <fstream>
 #include <unordered_map>
 #include <string>
-
+#include <iostream>
 using namespace std;
 
 int main() {
-  ifstream fin ("F.in");
-  ofstream fout("F.out");
-  
   int n;
   unordered_map<string, int> candies;
-  fin >> n;
+  cin >> n;
   for (int i = 0; i < n; i++) {
     int sugar;
     string name;
-    fin >> name >> sugar;
+    cin >> name >> sugar;
     candies[name] = sugar;
   }
   string receipt;
-  fin >> receipt;
+  cin >> receipt;
   
   string str = "";
   int count = 0;
@@ -30,8 +27,6 @@ int main() {
     }
   }
   
-  fout << count << endl;
-  fout.close();
-  
+  cout << count << endl;  
   return 0;
 }
