@@ -1,0 +1,9 @@
+/usr/bin/python3 gen.py 5 100 10 > in/2.in
+/usr/bin/python3 gen.py 10 100 10 > in/3.in
+/usr/bin/python3 gen.py 10 100 100 > in/4.in
+/usr/bin/python3 gen.py 50 1000 100 > in/5.in
+/usr/bin/python3 gen.py 80 1000 300 > in/6.in
+/usr/bin/python3 gen.py 80 10000 500 > in/7.in
+/usr/bin/python3 gen.py 100 100000 700 > in/8.in
+/usr/bin/python3 gen.py 100 100000 1000 > in/9.in
+/usr/bin/python3 gen.py 100 100000 1000 > in/10.in
