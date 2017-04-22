@@ -25,7 +25,7 @@ int main() {
   for (int i = 0; i < receipt.size(); i++) {
     str += receipt[i];
     if (candies.find(str) != candies.end()) {
-      count += receipt[str];
+      count += candies[str];
       str = "";
     }
   }
