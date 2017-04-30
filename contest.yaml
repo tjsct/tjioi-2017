@@ -1,34 +1,81 @@
 name: test_run
 description: TJ IOI 2017 Test Run
 tasks:
-    - race
-    - lunchbox
-    - singing
-    - pencils
-    - puck
-    - candy
-    - larryopoly
-    - cookie
-    - hungry
-    - grocery
+- race
+- lunchbox
+- singing
+- pencils
+- puck
+- candy
+- larryopoly
+- cookie
+- hungry
+- grocery
 users:
-    - username: team1
-      password: password
-      first_name: Team 1
-      last_name: TJHSST
-    - username: team2
-      password: password
-      first_name: Team 2
-      last_name: TJHSST
-    - username: team3
-      password: password
-      first_name: Team 3
-      last_name: TJHSST
-    - username: team4
-      password: password
-      first_name: Team 4
-      last_name: TJHSST
-    - username: test
-      password: test123
-      hidden: true
-
+- username: test
+  password: test123
+  hidden: true
+- first_name: Java Bruins
+  last_name: Forest Park High School
+  password: dusted fizzle giggle protrude
+  username: team0
+- first_name: Going Down in Flames
+  last_name: Rock Ridge High School
+  password: tidbit healer authoritative corroborate
+  username: team1
+- first_name: Falls Church 2
+  last_name: Falls Church High School
+  password: inaugural occur crumbed horn
+  username: team2
+- first_name: PVI Panthers
+  last_name: Paul VI Catholic High School
+  password: compost dunk acceleration homestead
+  username: team3
+- first_name: AET - 1
+  last_name: Academy of Engineering and Technology
+  password: mundane depleted suction rebuke
+  username: team4
+- first_name: void maaain
+  last_name: Lake Braddock Secondary School
+  password: exactly gavel interception vast
+  username: team5
+- first_name: Genetic Algorithms
+  last_name: Woodson High School
+  password: wintry credit money stared
+  username: team6
+- first_name: TechSupport (Scammers)
+  last_name: Robinson Secondary School
+  password: heirloom embossed impurity gambit
+  username: team7
+- first_name: Freedom High School
+  last_name: Freedom High School
+  password: etiquette bestowed manhole yodel
+  username: team8
+- first_name: Chantilly Coders
+  last_name: Chantilly High School
+  password: tulip uncertainty immerse fiesta
+  username: team9
+- first_name: ILITE Betaware
+  last_name: Battlefield High School
+  password: virtuous collector reveal wish
+  username: teamA
+- first_name: Langley HS Coders
+  last_name: Langley High School
+  password: flocked closet piggyback incompatible
+  username: teamB
+- first_name: AET - 2
+  last_name: Academy of Engineering and Technology
+  password: owed bridegroom salved serpent
+  username: teamC
+- first_name: Overclocked
+  last_name: Rock Ridge High School
+  password: deprecate empowered curl unreasonable
+  username: teamD
+- first_name: Javaliers
+  last_name: Woodson High School
+  password: distinctive bagel checker spark
+  username: teamE
+- first_name: Falls Church 1
+  last_name: Falls Church High School
+  password: reverencing ledger birding fortnight
+  username: teamF
