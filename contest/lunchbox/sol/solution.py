@@ -1,11 +1,12 @@
-num_array = input().split(" ")
-N = int(num_array[0])
-x = int(num_array[1])
-y = int(num_array[2])
+#!/usr/bin/env python3
+
+N, x, y = map(int, input().split())
+
 for i in range(N):
-    line = input().split(" ")
+    line = input().split()
     direction = line[0]
     steps = int(line[1])
+
     if direction == "N":
         y += steps
     elif direction == "S":
@@ -14,5 +15,5 @@ for i in range(N):
         x += steps
     elif direction == "W":
         x -= steps
-print(x, y)
 
+print(x, y)

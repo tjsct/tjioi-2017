@@ -1,8 +1,7 @@
-line = input().split(" ")
-n = int(line[0])
-k = int(line[1])
-array = []
-[array.append(int(input())) for i in range(n)]
-array = list(reversed(sorted(array)))
+#!/usr/bin/env python3
+
+n, k = map(int, input().split(" "))
+array = [int(input()) for i in range(n)]
+array.sort(reverse=True)
 total = sum(array[:k])
 print(total)
