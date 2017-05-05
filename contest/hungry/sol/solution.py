@@ -1,24 +1,30 @@
-import heapq
+#!/usr/bin/env python3
 
-try:
-    input = raw_input
-except NameError:
-    pass
+from heapq import *
 
-n = int(input(""))
-m = [[int(x) for x in input("").strip().split(" ")] for i in range(n)]
+n = int(input())
+m = [list(map(int, input().strip().split())) for i in range(n)]
 
 pq = []
-heapq.heappush(pq, (m[0][0],0,0))
-seen = {}
-while len(pq) > 0:
-    c = heapq.heappop(pq)
-    if c[1:] == (n-1,n-1):
-        print(c[0])
-        break
-    if c[1:] in seen:
+seen = set()
+
+heappush(pq, (m[0][0], (0, 0)))
+
+while pq:
+    cost, loc = heappop(pq)
+    if loc in seen:
         continue
-    seen[c[1:]] = None
-    for d in [(c[1]+1,c[2]),(c[1],c[2]+1)]:
-        if d not in seen and d[0]<n and d[1]<n:
-            heapq.heappush(pq, (c[0]+m[d[0]][d[1]],)+d)
+    seen.add(loc)
+
+    if loc == (n-1, n-1):
+        print(cost)
+        break
+
+    neighbors = [
+        (loc[0] + 1, loc[1]    ),
+        (loc[0]    , loc[1] + 1),
+    ]
+    for d in neighbors:
+        if d not in seen and d[0] < n and d[1] < n:
+            d_cost = cost + m[d[0]][d[1]]
+            heappush(pq, (d_cost, d))
