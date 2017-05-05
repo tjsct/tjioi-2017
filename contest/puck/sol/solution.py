@@ -1,39 +1,44 @@
-N,K = map(int, input().split())
+#!/usr/bin/env python3
 
-circle = [-1 for i in range(N)]
-circle[0] = 0 # fix one element for circle
+def countPerm(perm, remaining, ind, pairs):
+    ans = 0
 
-pairs = [[] for i in range(N)]
-remaining = set(range(1,N))
+    # base case
+    if not remaining:
+        if perm[0] not in pairs[perm[-1]]:
+            return 1
 
-for i in range(K):
-    a,b = map(int, input().split())
-    pairs[a].append(b)
-    pairs[b].append(a)
+    # recur
+    for val in remaining:
+        if val not in pairs[perm[ind]]:
+            perm[ind+1] = val
+            remaining.remove(val)
 
-ans = 0
+            ans += countPerm(perm, remaining, ind+1, pairs)
 
-def genPerm(perm,left,ind):
-    global ans
-    if len(left) == 0: #base case
-        ans += checkPerm(perm,ind)
-        return
-    for i in left: #recur
-        perm[ind+1] = i
-        left.remove(i)
-        if checkPerm(perm,ind) == 1:
-            genPerm(perm,left,ind+1)
-        left.add(i)
-        perm[ind+1] = -1
+            perm[ind+1] = -1
+            remaining.add(val)
 
-def checkPerm(perm,length):
-    for i in range(N):
-        nextInd = i+1
-        if nextInd >= N:
-            nextInd = 0
-        if perm[nextInd] in pairs[perm[i]]:
-            return 0
-        return 1
+    return ans
 
-genPerm(circle,remaining,0)
-print(ans)
+
+def main():
+    N, K = map(int, input().split())
+
+    circle = [-1 for i in range(N)]
+    circle[0] = 0  # fix one element of the circle
+
+    pairs = [[] for i in range(N)]
+
+    for i in range(K):
+        a, b = map(int, input().split())
+        pairs[a].append(b)
+        pairs[b].append(a)
+
+    remaining = set(range(N))
+    remaining.remove(0)
+    print(countPerm(circle, remaining, 0, pairs))
+
+
+if __name__ == '__main__':
+    main()
