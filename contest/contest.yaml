@@ -39,17 +39,17 @@ users:
   last_name: Lake Braddock Secondary School
   password: exactly gavel interception vast
   username: team5
-- first_name: Genetic Algorithms
+- first_name: Javaliers
   last_name: Woodson High School
-  password: wintry credit money stared
+  password: distinctive bagel checker spark
   username: team6
 - first_name: TechSupport (Scammers)
   last_name: Robinson Secondary School
   password: heirloom embossed impurity gambit
   username: team7
-- first_name: Freedom High School
-  last_name: Freedom High School
-  password: etiquette bestowed manhole yodel
+- first_name: Falls Church 1
+  last_name: Falls Church High School
+  password: reverencing ledger birding fortnight
   username: team8
 - first_name: Chantilly Coders
   last_name: Chantilly High School
@@ -71,11 +71,3 @@ users:
   last_name: Rock Ridge High School
   password: deprecate empowered curl unreasonable
   username: teamD
-- first_name: Javaliers
-  last_name: Woodson High School
-  password: distinctive bagel checker spark
-  username: teamE
-- first_name: Falls Church 1
-  last_name: Falls Church High School
-  password: reverencing ledger birding fortnight
-  username: teamF
