@@ -1,6 +1,6 @@
 name: hungry
 title: Hungry Hungry Larrys
-time_limit: 10
+time_limit: 2
 memory_limit: 256
 n_input: 10
 infile: ""
