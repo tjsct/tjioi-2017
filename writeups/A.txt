@@ -1,1 +1,0 @@
-So in this problem all we had to do was read in the the distance, divide it by 100 (because the robot moves in increments of 100) and multiply this result by the time it takes for the robot to travel 100 meters. This gives us the time it takes for the robot to move the given distance. Based on this, we compare to how well Larry did and output the appropriate answer.
