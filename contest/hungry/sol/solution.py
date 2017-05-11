@@ -3,18 +3,18 @@
 from heapq import *
 
 n = int(input())
-m = [list(map(int, input().strip().split())) for i in range(n)]
+grid = [list(map(int, input().strip().split())) for i in range(n)]
 
 pq = []
-seen = set()
+seen = [[False for j in range(n)] for i in range(n)]
 
-heappush(pq, (m[0][0], (0, 0)))
+heappush(pq, (grid[0][0], (0, 0)))
 
 while pq:
     cost, loc = heappop(pq)
-    if loc in seen:
+    if seen[loc[0]][loc[1]]:
         continue
-    seen.add(loc)
+    seen[loc[0]][loc[1]] = True
 
     if loc == (n-1, n-1):
         print(cost)
@@ -25,6 +25,6 @@ while pq:
         (loc[0]    , loc[1] + 1),
     ]
     for d in neighbors:
-        if d not in seen and d[0] < n and d[1] < n:
-            d_cost = cost + m[d[0]][d[1]]
+        if d[0] < n and d[1] < n and not seen[d[0]][d[1]]:
+            d_cost = cost + grid[d[0]][d[1]]
             heappush(pq, (d_cost, d))
