@@ -1,16 +1,9 @@
-name: test_run
-description: TJ IOI 2017 Programming Round
+name: practice_contest
+description: TJ IOI 2017 Practice Programming Round
 tasks:
-- race
-- lunchbox
-- singing
-- pencils
-- puck
-- candy
-- larryopoly
-- cookie
-- hungry
-- grocery
+- captcha
+- work
+- higher
 users:
 - username: test
   password: test123
