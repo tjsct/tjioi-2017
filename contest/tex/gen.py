@@ -12,7 +12,7 @@ s = r'''\documentclass{{article}}
 
 \end{{document}}'''
 
-problems = list(map(lambda x: x[x.find("/")+1:x.find(".")], glob.glob("problems/*.tex")))
+problems = ['race', 'lunchbox', 'singing', 'pencils', 'puck', 'candy', 'larryopoly', 'cookie', 'hungry', 'grocery']
 
 for (i, p) in enumerate(problems):
 	f = open("{}.tex".format(p), "w")
