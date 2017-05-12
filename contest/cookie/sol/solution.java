@@ -29,7 +29,7 @@ class cookie {
         final int N = sc.nextInt(), Q = sc.nextInt();
 
         int[] A = new int[N];
-        HashMap<Integer, TreeSet<Integer>> factorMap = new HashMap<>();
+        HashMap<Integer, Integer> factorMap = new HashMap<>();
 
         // read values
         for (int i = 0; i < N; i++) {
@@ -37,10 +37,7 @@ class cookie {
 
             ArrayList<Integer> factors = getFactors(A[i]);
             for (int factor : factors) {
-                if (!factorMap.containsKey(factor)) {
-                    factorMap.put(factor, new TreeSet<Integer>());
-                }
-                factorMap.get(factor).add(i);
+                if(!factorMap.continsKey(factor)) factorMap.put(factor, i);
             }
         }
 
@@ -48,7 +45,7 @@ class cookie {
         for (int i = 0; i < Q; i++) {
             int x = sc.nextInt();
             if (factorMap.containsKey(x)) {
-                System.out.println(factorMap.get(x).first() + 1);
+                System.out.println(factorMap.get(x) + 1);
             } else {
                 System.out.println(-1);
             }
