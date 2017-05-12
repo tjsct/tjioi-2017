@@ -1,0 +1,13 @@
+\textbf{SOLUTION:}
+\blank
+Initially, this problem appears to resemble the knapsack problem, which is discussed in depth in the Study Guide. However, there is an additional restraint: Niki will take at most one of each type of bill. Thus, we take a similar approach as the knapsack problem, but which a slightly different recurrence relation. 
+\blank
+Let $dp[i]$ be the maximum number of bills that could form $i$ dollars and $A[j]$ be the dollar value of the $jth$ dollar. Then we have
+
+$$dp[i+A[j]] = \max (dp[i]+1, dp[i+A[j]])$$
+
+for all $i$ and $j$. In order to ensure that each dollar is used only once, we must loop $i$ backgrounds, however. 
+\blank
+Once we construct the dp array, we can answer each of the queries in constant time. The final time complexity of this solution is $O(ND+M)$, where $D$ is the maximum dollar amount ($1000$). 
+\blank
+Note that the maximum size of each of Niki's queries is $1,000,000$, so if we initialize the dynamic programming array with size $100,000$ (the maximum amount that Niki could possibly hold), we have to check for whether Niki's query lies within the bounds of our dynamic programming array. Failing to do so would result in an \verb|ArrayIndexOutOfBoundsException| in Java, or undefined behavior in C++.  

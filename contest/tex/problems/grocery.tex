@@ -1,0 +1,28 @@
+\section{Grocery Shopping}
+
+On the opening day of the TJHSST Third Floor Grocery Shop, $N$ ($1 \leq N \leq 100,000$) students arrive, where the $i$th student would like to buy $A_i$ ($1 \leq A_i \leq 100$) items. The grocery shop has a total of $M$ ($1 \leq M \leq 100,000$) checkout stations, and the number of seconds it takes for a student to checkout is exactly equal to the number of items that student purchases.
+\blank
+The grocery shop's management team has contracted TJ IOI Inc.\@ to help ease some of the checkout congestion.  The consultants at TJ IOI Inc.\@ have devised an unusual plan to facilitate grocery checkouts in a calm (but inefficient) manner: all $N$ students will line up in the order of arrival, and the management team will divide the students into $M$ contiguous segments. Each segment will check out at a different checkout station, and all of the stations may operate at the same time. Please help the management team determine the minimum amount of time necessary to checkout all students if they divide the students optimally.
+\blank
+\textbf{SHORT NAME:} \verb|grocery|
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line contains $N$ and $M$.
+The next $N$ lines contain an integer representing $A_i$.
+\blank
+\textbf{OUTPUT FORMAT:}\\
+Output the minimum amount of time necessary to checkout all students.
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+5 3
+1
+2
+3
+4
+5
+\end{verbatim}
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+6
+\end{verbatim}

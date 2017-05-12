@@ -1,0 +1,11 @@
+\textbf{SOLUTION:}
+\blank
+Because the problem is asking for us to compute sums over contiguous ranges, we are first motivated to implement the prefix-sum data structure, which is defined as follows. Let $P[i] = \sum_{k=0}^{i} A[k]$. Then, to compute the sum between $i$ and $j$, which is normally a $O(N)$ operation, we can merely compute $P[i] - P[j-1]$ instead, reducing it to constant time. Note that the prefix-sum array can be computed in linear time since $P[i] = P[i-1] + A[i]$. 
+\blank
+Next, we employ the strategy of binary searching on the answer. The central premise of this idea is to check whether a given solution (time needed to checkout all students) is attainable; if it is then we try a smaller solution and if it isn't then we try a larger solution. By choosing solution values similarly to a binary search, we can add a $\log (AN)$ factor as opposed to an $AN$ factor. 
+\blank
+In order to check whether any given solution, we perform a series of binary searches. Suppose that the solution is $x$ and we want to start a contiguous range at $i$. We want to find the largest $j$ such that $P[j] - P[i-1] \leq x$. To find $j$ efficiently, we can binary search the value $x + P[i-1]$ on the prefix-sum array to find $j$ in $O(\log M)$. We then repeat this process $M$ times (once for each checkout station), and update $i$ on each iteration accordingly. 
+\blank
+If the final index that we obtain from the binary search is less than $M$, then $x$ is too small and we try a larger value. Otherwise, we can try smaller values of $x$. 
+\blank
+The final time complexity of this solution is $O(M \log(M) \log(AN))$.

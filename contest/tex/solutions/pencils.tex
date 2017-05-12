@@ -1,0 +1,5 @@
+\textbf{SOLUTION:}
+\blank
+Whenever we are tasked with finding the $N$ greatest values of a set, we are immediately motivated to use a sort.  This is because a sort will arrange a data set "in order\footnote{The word "order" is loosely defined, as we can define what the order is.  For example, consider a group of people.  We could define the order as height from greatest to least, or age from least to greatest.  Regardless, there must be some metric by which we sort.}", which is very useful for our purposes. This is because if the pencils are sorted in order of height, we can simply sum the first $N$ pencil lengths (or last $N$, depending on which way you sort the elements).
+\blank
+One may use any of the standard library sorts (\verb|sorted| in Python, \verb|Arrays.sort()| in Java, and \verb|sort| in C++) to accomplish this task in $O(N\log N)$ time, fast enough to solve all cases. Alternatively, one may implement their own $O(N \log N)$ sort, though this is not the intended solution.

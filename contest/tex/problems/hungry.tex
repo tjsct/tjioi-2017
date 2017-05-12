@@ -1,0 +1,30 @@
+\section{Hungry Hungry Larrys}
+
+At the end of a long day at work, Devon stands in his cubicle at the northwest corner of an $ N \times N $ grid ($ 1 \leq N \leq 800 $) of cubicles on the 100$^{th}$ floor of TJ IOI Inc.  Each minute, Devon can move either one cubicle to the south or one cubicle to the east, and would like to reach the elevator, located in the cubicle at the southeast corner of the floor.
+\blank
+However, a number of Larrys $ L_{i, j} $ reside in each cubicle ($ 0 \leq L_{i, j} \leq 9 $), pretending to do work.  Every time Devon moves into a new cubicle, each Larry in the cubicle that Devon moves into will reach into Devon’s wallet and take one dollar.  It is guaranteed that there are no Larrys in Devon's own cubicle (i.e., the one he begins on).
+\blank
+Thankfully, Devon’s wallet has an infinite amount of money, but he still would like to lose as little money as possible.  Determine the least amount of money that Devon must lose to the hungry hungry Larrys along the way, in order to reach the elevator and exit the building.
+\blank
+Note: North corresponds to up, south corresponds to down, east corresponds to right, and west corresponds to left.
+\blank
+\textbf{SHORT NAME:} \verb|hungry|
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line of input contains the integer $ N $, the size of the grid of cubicles.  The next $ N $ lines each contain $ N $ integers, and together describe the number of Larrys within each cubicle.
+\blank
+\textbf{OUTPUT FORMAT:}\\
+Output a single integer, the least amount of money that Devon must lose in order to get to the elevator.
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+4
+0 2 5 1
+2 9 3 0
+4 6 1 2
+8 2 2 6
+\end{verbatim}
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+16
+\end{verbatim}
