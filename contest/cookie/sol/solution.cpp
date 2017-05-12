@@ -12,7 +12,7 @@ int main(){
     for (int i = 0; i < N; i++){
         int num; cin >> num;
         a[i] = num;
-        for (int j = 2; j < 400; j++){
+        for (int j = 2; j*j <= num; j++){
             if (num % j == 0){
                 while (num % j == 0){
                     num /= j;
