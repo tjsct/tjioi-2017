@@ -37,7 +37,7 @@ class cookie {
 
             ArrayList<Integer> factors = getFactors(A[i]);
             for (int factor : factors) {
-                if(!factorMap.continsKey(factor)) factorMap.put(factor, i);
+                if(!factorMap.containsKey(factor)) factorMap.put(factor, i);
             }
         }
 
