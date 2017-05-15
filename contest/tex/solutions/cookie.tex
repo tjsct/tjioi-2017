@@ -1,0 +1,9 @@
+\textbf{SOLUTION:}
+\blank
+This problem gives us a list of integers $A_i$, and for each query value $X$, asks us to find the minimum index $i$ such that $A_i$ divides $X$. The primary insight for this problem is that because each query value $X$ is prime, and we're querying the factors of $A_i$, we only need to consider the prime factorization of $A_i$.
+\blank
+Once we've accomplished this, we can simply create an array of sets, where each index of the array $k$ represents the value of a prime factor, and each value in the set represents the index $i$ corresponding to a value $A_i$ such that $k$ divides $A_i$. We should perform this as a pre-processing step before we process any queries. This requires that we implement an algorithm for factoring integers, which can be done in $O(\sqrt{N})$ by simply checking whether all integers less than or equal to $\sqrt{N}$ are factors.
+\blank
+Then, for each query value $X$, we simply find the minimum value in the set corresponding to $k = X$. If there is no such set, then $k$ is not a prime factor of any value in $A_i$ and we output $-1$. Otherwise, we output the minimum value in the set to get the first possible index of $i$. This solution runs in time.
+\blank
+A simple optimization we can make is because we will only ever need the first index of $i$, we can simply maintain the minimum value in the set.

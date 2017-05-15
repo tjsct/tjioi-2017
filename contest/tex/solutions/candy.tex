@@ -1,0 +1,9 @@
+\textbf{SOLUTION:}
+\blank
+We would like to figure out how the $N$ strings make up the receipt (with length $M$). It is guaranteed that there is only one way to do this, since no string is a prefix of another.
+\blank
+To do this, we first store each of the strings in a hash map (a dictionary in Python, a \verb|HashMap| in Java, or an \verb|unordered_map| in C++); the keys and values of the entries are the candy name and the amount of sugar, respectively.
+\blank
+Next, we define a variable that stores the total sugar in the candy, $T$, and set this initially to zero. Now we iterate through the receipt with an index $i$ initially set to zero. While $i$ is less than $M$, we have a nested loop which iterates a variable $j$ from $i$ to $M$. When the substring of the receipt from $i$ to $j$ is found in the hash map, this means that we have found the next candy name that that composes the receipt. We can add its sugar amount to the $T$, add $j$ to $i$, and break from the inner loop. This algorithm would eventually go through each candy in the receipt.
+\blank
+We can bound the runtime my establishing the worst-cases for each of the loops. The outer loop could at most iterate up to $M$; the inner loop could at most iterate up to $L$, the maximum length of any given candy name. Thus, the runtime is $O(ML)$.

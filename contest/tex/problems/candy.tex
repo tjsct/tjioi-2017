@@ -1,0 +1,27 @@
+\section{Candy Fest}
+
+TJ IOI Inc.\@ is hosting its annual Candy Fest! Larry, who is organizing the event, has found a store that offers a massive sale on candy. Unfortunately, after purchasing a large amount of $ N $ different kinds of candy ($ 1 \leq N \leq 100,000 $), he realized that the receipt of length $ M $ ($ 1 \leq M \leq 1,000 $) has no spaces in it! Frustrated with this receipt format, Larry instead ate all of the candy himself! Help Larry figure out how much sugar Larry will consume after he eats all of the candy.
+\blank
+Note: It is guaranteed that no candy name is a prefix of another candy name and that a solution exists.
+\blank
+\textbf{SHORT NAME:} \verb|candy|
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line of input contains the integer $ N $, the number of different kinds of candy.  The next $ N $ lines contain the name of the candy, a string of length $ L $ ($ 1 \leq L \leq 100 $) given in all capital letters, followed by the amount of sugar in that candy $a_i$ ($1 \leq a_i \leq 100,000$), separated by a space.  The final line will contain the receipt, a string of capital letters.
+\blank
+\textbf{OUTPUT FORMAT:}\\
+Output a single integer, the total amount of sugar that Larry will consume.
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+4
+KITKAT 20
+TWIX 28
+REESES 8
+SNICKERS 9
+TWIXTWIXKITKATREESESTWIXSNICKERSTWIX
+\end{verbatim}
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+149
+\end{verbatim}

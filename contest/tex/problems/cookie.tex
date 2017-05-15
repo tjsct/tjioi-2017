@@ -1,0 +1,48 @@
+\section{Cookie Baking}
+
+Devon, a dedicated member of the culinary staff at TJ IOI Inc., has made cookies for Kevin's birthday! However, smelling the aroma of chocolate chips coming from the kitchen, Alex devises a plot to bring cookies to him and his fellow employees.
+\blank
+Devon has $ N $ large piles of cookies ($ 1 \leq N \leq 100,000 $) on the kitchen counter, where the $i^{th}$ pile ($ 1 \leq i \leq N $) contains $a_i$ cookies ($ 1 \leq a_i \leq 1,000,000 $). Alex, on the other hand, wants to steal his cookies, but he brings along a different number of employees each time.
+\blank
+When he steals cookies, he wants to make sure he is able to split the cookies evenly among him and his $ X-1 $ employees ($ X $ people total). Alex always chooses $X$ to be prime, because he likes prime numbers. Since the kitchen door is located next to cookie pile $ 1 $, Alex wants to take cookies from the first possible pile (i.e. the minimum value of $i$), such that he can split the pile's cookies amongst $ X $ people evenly.
+\blank
+Since Devon is a very efficient chef, whenever Alex takes cookies from a pile, he is able to restock the pile with exactly the same number of cookies. This means that the sizes of the cookie piles effectively do not change.
+%\blank
+%Unfortunately, Devon has caught on to Alex's devious plan. To slow Alex down, he occasionally swaps two piles of cookies.
+Whenever Alex arrives, help him determine the best pile to take cookies from.
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line contains $ N $ and $Q$ ($1 \leq Q \leq 100,000$).
+The second line contains $N$ integers representing $a_i$.
+The next $Q$ lines contains queries. Each of these lines consists of one integer $X$ ($1 \leq X \leq 1,000,000$), where $X$ is prime.
+\blank
+\textbf{OUTPUT FORMAT:}\\
+For each query, output the minimum $i$ such that $X$ divides $a_i$, or output $-1$ if no such $ a_i $ exists.
+%The next $Q$ lines contains queries. Each of these lines will start with `S' or `T'.
+%\begin{itemize}
+%    \item If the line starts with `S': two integers $x$, $y$ ($1 \leq x < y \leq N$) will follow, denoting Devon swapping piles $x$ and $y$.
+%    \item If the line starts with `T': one integer $X$ ($1 \leq X \leq 100,000$, $X$ is prime) will follow. Output the minimum $i$ such that $X$ divides $a_i$, or output $-1$ if no such $ a_i $ exists. 
+%\end{itemize}
+\blank
+\textbf{SHORT NAME:} \verb|cookie|
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+5 6
+2 15 49 11 17
+3
+7
+2
+3
+13
+5
+\end{verbatim}
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+2
+3
+1
+2
+-1
+2
+\end{verbatim}

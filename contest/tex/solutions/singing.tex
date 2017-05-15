@@ -1,0 +1,9 @@
+\textbf{SOLUTION:}
+\blank
+The key observation for this problem is to realize that for any given $ K $, the maximum number of notes that Devon can go down is fixed.  In other words, the order in which Devon's notes go down does not matter.  For a given $ K $, we can go down $ 1 $, $ 2 $, $ 3 $, etc. notes, all the way until $ K $ notes.  The total is given by $ 1 + 2 + 3 + \cdots + (K-1) + K $.  Therefore, if $ N $ is less than this sum, then we are guaranteed\footnote{The proof of this is slightly more involved, but the idea is as follows: Suppose that $ N $ is less than $ K $, but not more than $ K $ less.  Then, use all note differences aside from $ (N-K) $.  If $ N $ is more than $ K $, then omit note difference $ K $, and repeat the process on the first $ (K-1) $ notes.} that Devon can reach note zero.  Otherwise, Devon cannot reach note zero.  Therefore, we can try increasingly large values of $ K $ until this sum exceeds $ N $.  However, we cannot afford to recalculate the sum every time, as that would require $ O(K^2) $ time, as for each value of $ K $, we must loop over $ K $ elements.
+\blank
+We can use the formula
+
+$$ \sum_{k=1}^{M} k^2 = \frac{M(M+1)}{2} $$
+
+to reduce this operation to $ O(K) $ time, as we can determine the sum of the first $ K $ integers in constant time, which is fast enough to solve all test cases.  This formula can be proven using induction, or by pairing the terms from the "front" and the "back".

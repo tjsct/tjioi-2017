@@ -1,0 +1,5 @@
+\textbf{SOLUTION:}
+\blank
+Because the bounds for this problem are low enough, we can actually generate all possible configurations and check if they work!  This is because the number of ways that we can arrange a set of $N$ people in a circle is given by $(N-1)!$\footnote{This is due to the fact that there are $N!$ ways to arrange $N$ people in a line, but the circular permutation allows for rotations, which removes a degree of freedom.  You can think of this as fixing one person, and arranging the rest in a line after him/her.}, and the bound on $N$ is sufficiently low enough to run in time.  Therefore, we can use a brute force solution.
+\blank
+We can make a further optimization by building each configuration recursively.  At each step, we add another person to the configuration.  However, if at any point, adding a specific person creates a conflict, we can cut off that branch of the recursion search tree immediately, saving a lot of time.
